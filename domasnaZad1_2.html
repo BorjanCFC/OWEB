@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+
+    <link rel="stylesheet" href="domasnaZad1.css">
+
+
+</head>
+
+
+<body>  
+
+    <center>
+
+    <h1>Order Pizza!</h1>
+
+    <img src="pizza.jpg" alt="Pizza" class="pizza-img">
+
+    <form> 
+
+    <h2>Select the pizza size:</h2>
+    
+    <label>
+        <input name = "size" type = "radio" value = "Big">
+        <strong>Big</strong>
+    </label><br>
+
+    <label>
+        <input name = "size" type = "radio" value = "Medium">
+        <strong>Medium</strong>
+    </label><br>
+    
+    <label>
+        <input name = "size" type = "radio" value = "Small">
+        <strong>Small</strong>
+    </label><br>
+
+    <h2>Select the crust type:</h2>
+
+    <label>
+        <select name = "crust type">
+            <option selected>Deep Dish</option>
+            <option>Thin Crust</option>
+            <option>Stuffed Crust</option>
+            <option>Cheese Crust</option>
+        </select>
+
+    </label>
+
+    <h2>Select the filler:</h2>
+
+    <label>
+        <input name = "filler" type = "checkbox" value = "Sausages">
+        <strong>Sausages</strong>
+    </label><br>
+
+    <label>
+        <input name = "filler" type = "checkbox" value = "Pepper">
+        <strong>Pepper</strong>
+    </label><br>
+    
+    <label>
+        <input name = "filler" type = "checkbox" value = "Mushrooms">
+        <strong>Mushrooms</strong>
+    </label><br><br>
+
+    <label><strong>Name:</strong>
+        <input name = "Name" type = "text" size = "20">
+
+    </label><br>
+
+    <label><strong>Phone:</strong>
+        <input name = "Phone" type = "tel" size = "20">
+
+    </label><br><br>
+
+    <label>
+        <textarea name = "Message" rows = "4" cols = "36">Message: </textarea>
+
+    </label><br><br>
+
+    <input type="submit"  class = "button" value="Send">
+    <input type="reset" class = "button" value="Reset">
+
+    </form>
+
+    </center>
+    
+</body>
+
+</html>
