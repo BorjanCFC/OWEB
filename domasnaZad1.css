@@ -1,6 +1,11 @@
 body {
     font-family: Arial;
     background-color: burlywood;
+    background-image: url('pozadina.jpg'), url('pozadina.jpg');
+    background-repeat: repeat-y;
+    background-size: 30%;
+    background-position: left top, right top;
+    padding: 20px;
     
 }
 
@@ -51,3 +56,5 @@ form {
     height: 250px; 
 
 }
+
+
