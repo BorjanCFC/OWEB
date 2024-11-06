@@ -1,0 +1,98 @@
+body {
+    background-color: darkseagreen;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+
+h1 {
+    color: darkred;
+    font-size: 48px;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#game {
+    background-color: darkseagreen;
+    width: 600px;
+    text-align: center;
+}
+
+button {
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #3e6663;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 50px;
+    width: 120px;
+}
+
+
+#myGuess {
+    width: 50%;
+    height: 20px;
+    padding: 8px;
+    margin: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#hint {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+    
+}
+
+#numGuesses {
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 20px;
+    
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+#popupContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 3px solid #3e6663;
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.3),
+        0 6px 6px rgba(0, 0, 0, 0.2),
+        0 16px 32px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 200px;
+}
+
+#popupMessage {
+    font-size: 30px;
+    margin-bottom: 1px;
+    text-align: center;
+}
+
+#popupWord {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    text-align: center;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Word</title>
+
+    <link rel="stylesheet" href="domasnaZad3.css">
+</head>
+
+
+
+<body>
+
+    <center>
+    <h1>Guess the Word</h1><br>
+    <div id="start">
+        <button class="start-button" onclick="Game()">Start Game</button>
+    </div>
+
+    <div id="game">
+        <strong><p id="hint"></p></strong>
+        <strong><p id = "numGuesses">Number of guesses left: <span id="GuessNumber">5</span></p></strong>
+        <label>
+            <input id="myGuess" type="text" maxlength="5" placeholder="Enter your guess">
+        </label>
+        <button class = "guess-button" onclick="Guess()">Guess</button>
+        <strong><p id = "wordGuesses">Words Guessed: <span id = "wGuess"></span></p></strong>
+    </div>
+
+    <div id="popup">
+        <div id="popupContent"><br>
+            <strong><p id="popupMessage"></p></strong>
+            <strong><p id="popupWord"></p></strong>
+            <button class = "playAgain-button" onclick="playAgain()">Play Again</button>
+        </div>
+    </div>
+
+    </center>
+
+    <script src="domasnaZad3.js"></script>
+</body>
+
+
+</html>
