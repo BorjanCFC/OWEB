@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoPlaceMKD</title>
+  <link rel="stylesheet" href="proektnaZad.css">
+</head>
+
+<body>
+    <header>
+        <h1>AutoPlusMK</h1>
+        <nav>
+            <a href="proektnaZad.html" onclick="showHome()">Почетна</a>
+            <a href="#registration" onclick="showRegistrationForm()">Регистрација</a>
+            <a href="#Test vozenje" onclick="showTestDrive()">Тест возење</a>
+            <a href="#anketa" onclick="showSurvey()">Анкета</a>
+            <a href="#za-nas" onclick="showAboutUs()">За нас</a> 
+            <a href="#login" class="login-button" onclick="openLoginPopup()">Login</a>
+        </nav>
+
+        <div id="loginPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closeLoginPopup()">&times;</span>
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="main-content" id="main-content">
+        <center>
+            <div class="vehicle-container">
+                <div class="vehicle">
+                    <h2>НОВИ АВТОМОБИЛИ</h2>
+                    <a href="#newcars" onclick="showCarsNew()">
+                        <img src="sliki/novaKola.jpg" alt="Novi vozila">
+                    </a>
+                </div>
+
+                <div class="vehicle">
+                    <h2>ПОЛОВНИ АВТОМОБИЛИ</h2>
+                    <a href="#old cars" onclick="showCarsOld()">
+                        <img src="sliki/staraKola.jpg" alt="Polovni vozila">
+                    </a>
+                </div>
+            </div>
+        </center>
+    </div>
+
+    <div class="carsNew" id="carsNew">
+        <h1 class="newCars">Нови Автомобили</h1>
+        <form>
+            <div class="vehicle-categories">
+                <div>
+                    <select id="marka" name="marka" class="select">
+                        <option>Избери Марка</option>
+                        <option>Audi</option>
+                        <option>BMW</option>
+                        <option>Mercedes</option>
+                        <option>Volkswagen</option>
+                        <option>Porsche</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <select id="menuvach" name="menuvach" class="select">
+                        <option>Избери Менувач</option>
+                        <option>Рачен</option>
+                        <option>Автоматик</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <select id="gorivo" name="gorivo" class="select">
+                        <option>Избери Гориво</option>
+                        <option>Бензин</option>
+                        <option>Дизел</option>
+                        <option>Бензин-Хибрид</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <select id="nadvoresna-boja" name="nadvoresna-boja" class="select">
+                        <option>Избери Боја</option>
+                        <option>Бела</option>
+                        <option>Црна</option>
+                        <option>Сива</option>
+                        <option>Црвена</option>
+                        <option>Сина</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <select id="godina" name="godina" class="select">
+                        <option>Избери Година</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                        <option>2021</option>
+                        <option>2020</option>
+                    </select>
+                </div>
+                <button type="reset" class="button" value="Reset" id="resetButton">Ресетирајте</button>
+                <button type="submit" class="button" value="Submit" id="submitButton">Потврди</button>
+        </form>
+            </div>
+    
+        <div class="car-grid">
+            <div class="car-block">
+                <img src="sliki/car1.jpg" alt="Car 1">
+                <h3>Mercedes-Benz C-Class</h3>
+                <p>2020 • Автоматик • Дизел</p>
+                <p>1598 cm&sup3 • 122 HP • Сива</p>
+                <p class="price">€30,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/mercedes-benz/c-class">Рецензии за Mercedes-Benz C-Class</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car2.jpg" alt="Car 2">
+                <h3>BMW 3 Series</h3>
+                <p>2022 • Автоматик • Бензин-Хибрид</p>
+                <p>1998 cm&sup3 • 252 HP • Бела</p>
+                <p class="price">€32,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/bmw/3-series">Рецензии за BMW 3 Series</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car3.jpg" alt="Car 3">
+                <h3>Audi A4</h3>
+                <p>2021 • Рачен • Бензин</p>
+                <p>1984 cm&sup3 • 150 HP • Црвена</p>
+                <p class="price">€28,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/audi/a4">Рецензии за Audi A4</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car4.jpg" alt="Car 4">
+                <h3>Porsche Macan</h3>
+                <p>2023 • Автоматик • Дизел</p>
+                <p>2967 cm&sup3 • 260 HP • Сива</p>
+                <p class="price">€55,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/porsche/macan">Рецензии за Porsche Macan</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car5.jpg" alt="Car 5">
+                <h3>Volkswagen Golf</h3>
+                <p>2022 • Рачен • Дизел</p>
+                <p>1968 cm&sup3 • 116 HP • Бела</p>
+                <p class="price">€23,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/volkswagen/golf">Рецензии за Volkswagen Golf</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car6.jpg" alt="Car 6">
+                <h3>Mercedes-Benz E-Class</h3>
+                <p>2022 • Автоматик • Дизел</p>
+                <p>1950 cm&sup3 • 180 HP • Црна</p>
+                <p class="price">€45,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/mercedes-benz/e-class">Рецензии за Mercedes-Benz E-Class</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car7.jpg" alt="Car 7">
+                <h3>BMW 5 Series</h3>
+                <p>2021 • Автоматик • Бензин-Хибрид</p>
+                <p>1998 cm&sup3 • 184 HP • Сина</p>
+                <p class="price">€48,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/bmw/5-series">Рецензии за BMW 5 Series</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car8.jpg" alt="Car 8">
+                <h3>Audi Q5</h3>
+                <p>2022 • Автоматик • Дизел</p>
+                <p>1968 cm&sup3 • 163 HP • Црна</p>
+                <p class="price">€55,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/audi/q5">Рецензии за Audi Q5</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car9.jpg" alt="Car 9">
+                <h3>Audi A8</h3>
+                <p>2022 • Автоматик • Дизел</p>
+                <p>2967 cm&sup3 • 286 HP • Сива</p>
+                <p class="price">€80,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/audi/a8">Рецензии за Audi A8</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car10.jpg" alt="Car 10">
+                <h3>Volkswagen Tiguan</h3>
+                <p>2021 • Рачен • Бензин</p>
+                <p>1468 cm&sup3 • 131 HP • Црна</p>
+                <p class="price">€45,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/volkswagen/tiguan">Рецензии за Volkswagen Tiguan</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car11.jpg" alt="Car 11">
+                <h3>Mercedes-Benz CLS</h3>
+                <p>2023 • Автоматик • Дизел</p>
+                <p>2925 cm&sup3 • 286 HP • Сина</p>
+                <p class="price">€68,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/mercedes-benz/cls">Рецензии за Mercedes-Benz CLS</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car12.jpg" alt="Car 12">
+                <h3>BMW 7 Series</h3>
+                <p>2023 • Автоматик • Дизел</p>
+                <p>2993 cm&sup3 • 300 HP • Црна</p>
+                <p class="price">€140,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/bmw/7-series">Рецензии за BMW 7 Series</a></p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="carsOld" id="carsOld">
+        <h1 class="newCars">Половни Автомобили</h1>
+        <form>
+            <div class="vehicle-categories">
+                <div>
+                    <select id="marka" name="marka" class="select">
+                        <option>Избери Марка</option>
+                        <option>Audi</option>
+                        <option>BMW</option>
+                        <option>Mercedes</option>
+                        <option>Volkswagen</option>
+                        <option>Ford</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <select id="menuvach" name="menuvach" class="select">
+                        <option>Избери Менувач</option>
+                        <option>Рачен</option>
+                        <option>Автоматик</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <select id="gorivo" name="gorivo" class="select">
+                        <option>Избери Гориво</option>
+                        <option>Бензин</option>
+                        <option>Дизел</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <select id="nadvoresna-boja" name="nadvoresna-boja" class="select">
+                        <option>Избери Боја</option>
+                        <option>Бела</option>
+                        <option>Црна</option>
+                        <option>Сива</option>
+                        <option>Црвена</option>
+                        <option>Сина</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <select id="godina" name="godina" class="select">
+                        <option>Избери Година</option>
+                        <option>2007</option>
+                        <option>2008</option>
+                        <option>2009</option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                    </select>
+                </div>
+                <button type="reset" class="button" value="Reset" id="resetButton">Ресетирајте</button>
+                <button type="submit" class="button" value="Submit" id="submitButton">Потврди</button>
+            </form>
+        </div>
+    
+        <div class="car-grid">
+            <div class="car-block">
+                <img src="sliki/car13.jpg" alt="Car 13">
+                <h3>Mercedes-Benz A 170</h3>
+                <p>2007 • Рачен • Бензин</p>
+                <p>1699 cm&sup3 • 116 HP • Црна • 221.000 km</p>
+                <p class="price">€4500</p>
+                <p><a href="https://www.topgear.com/car-reviews/mercedes-benz/a170">Рецензии за Mercedes-Benz A 170</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car14.jpg" alt="Car 14">
+                <h3>BMW 1 Series</h3>
+                <p>2013 • Рачен • Дизел</p>
+                <p>1995 cm&sup3 • 143 HP • Сива • 125.000 km</p>
+                <p class="price">€8500</p>
+                <p><a href="https://www.topgear.com/car-reviews/bmw/1-series">Рецензии за BMW 118</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car15.jpg" alt="Car 15">
+                <h3>Ford Fiesta</h3>
+                <p>2008 • Рачен • Бензин</p>
+                <p>1398 cm&sup3 • 68 HP • Сина • 192.000 km</p>
+                <p class="price">€3000</p>
+                <p><a href="https://www.topgear.com/car-reviews/ford/fiesta">Рецензии за Ford Fiesta</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car16.jpg" alt="Car 16">
+                <h3>Volkswagen Passat</h3>
+                <p>2011 • Автоматик • Дизел</p>
+                <p>1968 cm&sup3 • 170 HP • Бела • 255.000 km</p>
+                <p class="price">€12,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/volkswagen/passat">Рецензии за Volkswagen Passat</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car17.jpg" alt="Car 17">
+                <h3>BMW X3</h3>
+                <p>2009 • Автоматик • Дизел</p>
+                <p>1995 cm&sup3 • 177 HP • Црвена • 218.000 km</p>
+                <p class="price">€8000</p>
+                <p><a href="https://www.topgear.com/car-reviews/bmw/x3">Рецензии за BMW X3</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car18.jpg" alt="Car 18">
+                <h3>Mercedes-Benz E-Class</h3>
+                <p>2010 • Автоматик • Дизел</p>
+                <p>2148 cm&sup3 • 170 HP • Црна • 422.000 km</p>
+                <p class="price">€11,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/mercedes-benz/e-class">Рецензии за Mercedes-Benz E-Class</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car19.jpg" alt="Car 19">
+                <h3>Volkswagen Golf 6</h3>
+                <p>2012 • Рачен • Бензин</p>
+                <p>1390 cm&sup3 • 160 HP • Сина • 199.000 km</p>
+                <p class="price">€7000</p>
+                <p><a href="https://www.topgear.com/car-reviews/volkswagen/golf">Рецензии за Volkswagen Golf 6</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car20.jpg" alt="Car 20">
+                <h3>Ford Focus</h3>
+                <p>2012 • Рачен • Бензин</p>
+                <p>1595 cm&sup3 • 150 HP • Бела • 170.000 km</p>
+                <p class="price">€5500</p>
+                <p><a href="https://www.topgear.com/car-reviews/ford/focus">Рецензии за Ford Focus</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car21.jpg" alt="Car 21">
+                <h3>Audi A6</h3>
+                <p>2011 • Рачен • Дизел</p>
+                <p>1968 cm&sup3 • 163 HP • Сива • 180.000 km</p>
+                <p class="price">€15,500</p>
+                <p><a href="https://www.topgear.com/car-reviews/audi/a6">Рецензии за Audi A6</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car22.jpg" alt="Car 22">
+                <h3>Audi Q5</h3>
+                <p>2013 • Автоматик • Дизел</p>
+                <p>1968 cm&sup3 • 177 HP • Црвена • 279.000 km</p>
+                <p class="price">€16,000</p>
+                <p><a href="https://www.topgear.com/car-reviews/audi/q5">Рецензии за Audi Q5</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car23.jpg" alt="Car 23">
+                <h3>Ford Kuga</h3>
+                <p>2008 • Рачен • Бензин</p>
+                <p>1997 cm&sup3 • 136 HP • Бела • 174.000 km</p>
+                <p class="price">€6500</p>
+                <p><a href="https://www.topgear.com/car-reviews/ford/kuga-0">Рецензии за Ford Kuga</a></p>
+            </div>
+    
+            <div class="car-block">
+                <img src="sliki/car24.jpg" alt="Car 24">
+                <h3>Volkswagen Jetta</h3>
+                <p>2008 • Рачен • Дизел</p>
+                <p>1896 cm&sup3 • 105 HP • Црна • 288.000 km</p>
+                <p class="price">€4200</p>
+                <p><a href="https://www.topgear.com/car-reviews/volkswagen/jetta">Рецензии за Volkswagen Jetta</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="registration-form" class="registration-form">
+        <h2>Регистрација</h2>
+        <form>
+            <input type="text" id="ime" placeholder="Име" required>
+            <input type="text" id="prezime" placeholder="Презиме" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="tel" id="tel" placeholder="Телефонски број: +389" required>
+            <button type="submit" class="button" value="Submit" id="buttonSubmit">Регистрирај се</button>
+        </form>
+    </div>
+    
+    <div id="test-drive-form" class="test-drive-form">
+        <h2>Закажете Тест Возење</h2>
+        <form>
+            <label>Изберете Тип на Возило</label>
+            <select id="vehicle-type" name="vehicle-type" onchange="updateVehicleOptions()" required>
+                <option value="">Изберете тип</option>
+                <option value="new">Ново Возило</option>
+                <option value="used">Половно Возило</option>
+            </select>
+    
+            <label>Изберете Возило</label>
+            <select id="vehicle" name="vehicle" required>
+                <option value="">Прво изберете тип на возило</option>
+            </select>
+    
+            <label>Изберете Датум</label>
+            <input type="date" id="test-drive-date" name="test-drive-date" required>
+    
+            <label>Изберете Време</label>
+            <input type="time" id="test-drive-time" name="test-drive-time" required>
+    
+            <button type="submit" class="button" value="Submit" id="buttonSubmitTestDrive">Закажи Тест Возење</button>
+        </form>
+    </div>
+    
+    <div id="about-us" class="about-us">
+        <h2>За нас</h2>
+        <p>Нашата мисија е да го направиме процесот на избор на вашето ново возило брз, лесен и транспарентен. Нудиме висококвалитетни возила одржувани по најстроги стандарди. Со клиентот секогаш во фокусот, ние обезбедуваме професионална услуга, од првичниот избор на возило до финализирањето на комплетната документација. Секој чекор во нашиот процес ги следи сите законски регулативи и норми, за да го овозможиме најсигурниот избор за вас.</p>
+        
+        <div class="contact-info">
+            <h3>Контакт Информации</h3>
+            <p><strong>Телефон:</strong> +389 02 123 4567</p>
+            <p><strong>Email:</strong> <a href="https://mail.google.com/">contact@example.com</a></p>
+            <p><strong>Адреса:</strong><a href="https://www.google.com/maps"> Ул. Пример 123, Скопје, Македонија</a></p>
+        </div>
+    </div>
+    
+    <div id="survey" class="survey">
+        <h2>Анкета за Импресии од Сајтот</h2>
+        <form>
+            <label>Име:</label>
+            <input type="text" id="name" name="name" placeholder="Внесете име">
+            <label>Презиме:</label>
+            <input type="text" id="surname" name="surname" placeholder="Внесете презиме">
+            <label>Username:</label>
+            <input type="text" id="username" name="username" placeholder="Внесете username">
+            <label>Email:</label>
+            <input type="text" id="email" name="email" placeholder="Внесете email">
+    
+            <label for="visit-purpose">Цел на вашата посета:</label>
+            <select id="visit-purpose" name="visit-purpose" required>
+                <option value="">Изберете</option>
+                <option value="buy-car">Купување на автомобил</option>
+                <option value="test-drive">Закажување на тест возење</option>
+                <option value="info">Барање информации</option>
+                <option value="other">Друго</option>
+            </select>
+    
+            <label>Колку сте задоволни со нашиот сајт?</label>
+            <div>
+                <input type="radio" id="very-satisfied" name="satisfaction" value="very-satisfied" required>
+                <label for="very-satisfied">Многу задоволен/а</label><br>
+                <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
+                <label for="satisfied">Задоволен/а</label><br>
+                <input type="radio" id="neutral" name="satisfaction" value="neutral">
+                <label for="neutral">Неутрален/а</label><br>
+                <input type="radio" id="dissatisfied" name="satisfaction" value="dissatisfied">
+                <label for="dissatisfied">Незадоволен/а</label><br>
+                <input type="radio" id="very-dissatisfied" name="satisfaction" value="very-dissatisfied">
+                <label for="very-dissatisfied">Многу незадоволен/а</label>
+            </div>
+    
+            <label for="site-feedback">Ваши коментари или предлози:</label>
+            <textarea id="site-feedback" name="site-feedback" rows="4" placeholder="Внесете ваши коментари тука..."></textarea>
+    
+            <button type="submit" class="button" id="buttonSubmitSurvey">Испрати</button>
+        </form>
+    </div>
+    
+    <div id="imagePopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeImagePopup()">&times;</span>
+            <div class="image-details">
+                <div class="image-container">
+                    <img id="popupImage" src="" alt="Car Image">
+                </div>
+                <div class="interaction-section">
+                    <div class="comments-section">
+                        <div id="commentsContainer"></div>
+                        <div class="add-comment">
+                            <input type="text" id="commentInput" placeholder="Add a comment...">
+                            <button onclick="addComment()" class="postButton">Post</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="Copyright"><p>© Copyright 2024 AutoPlusMK</p></div>
+        <div class="social-media">
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://x.com/?lang=en">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="pz.js"></script>
+
+</body>
+</html>
